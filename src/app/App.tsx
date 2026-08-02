@@ -356,7 +356,14 @@ function Hero({ dark }: { dark: boolean }) {
       <div style={{ position: "absolute", width: 360, height: 360, borderRadius: "50%", left: -60, bottom: 40,
         background: dark ? "radial-gradient(circle,rgba(14,165,233,.05) 0%,transparent 70%)" : "radial-gradient(circle,rgba(14,165,233,.09) 0%,transparent 70%)", pointerEvents: "none" }} />
 
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 20px", width: "100%", position: "relative" }}>
+      <div
+  style={{
+    position: "relative",
+    maxWidth: 420,
+    width: "100%",
+    overflow: "hidden",
+  }}
+>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 48, alignItems: "center" }}>
           {/* Left */}
           <div data-aos="fade-right">
