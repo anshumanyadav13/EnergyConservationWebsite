@@ -846,7 +846,7 @@ function Team({ dark }: { dark: boolean }) {
           fontFamily: "'Nunito',sans-serif", fontSize: "0.87rem",
           color: dark ? "#86efac" : "#4b7a5e" }}>
           <i className="fa-solid fa-graduation-cap" style={{ color: "#16a34a", marginRight: 8 }} />
-          <strong>Department of Information Technology</strong> — Field Project 2026–27
+          <strong>Department of Information Technology, RJ College</strong> — Field Project 2026–27
         </div>
       </div>
     </SectionWrap>
