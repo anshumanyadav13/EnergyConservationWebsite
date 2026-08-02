@@ -413,7 +413,8 @@ alignItems: "center" }}>
               </button>
              
 <a href="https://forms.gle/bXbC4eZ3VMcRmF5b7" target="_blank" rel="noopener noreferrer"
-                style={{ background: "transparent", color: dark ? "#4ade80" : "#16a34a", padding: "12px 28px", borderRadius: 50,
+                style={{ background: "transparent", color: dark ? "#4ade80" : "#16a34a", padding: "12px 28px", borderRadius: 50,flex: 1,
+justifyContent: "center",
                   border: "2px solid #16a34a", textDecoration: "none", fontWeight: 700, fontSize: "0.92rem",
                   fontFamily: "'Poppins',sans-serif", display: "flex", alignItems: "center", gap: 8,
                   transition: "background .2s,color .2s,transform .2s" }}
