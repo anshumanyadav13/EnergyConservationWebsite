@@ -343,7 +343,7 @@ function Hero({ dark }: { dark: boolean }) {
         display: "flex",
         alignItems: "center",
         position: "relative",
-        overflow: "hidden",
+        overflowX: "hidden",
         paddingTop: 80,
         background: dark
           ? "linear-gradient(135deg,#071a0f 0%,#0d2618 45%,#082f49 100%)"
