@@ -368,7 +368,7 @@ const isMobile = window.innerWidth <= 768;
         <div style={{ display: "grid",
 gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
 gap: isMobile ? 30 : 48,
-alignItems: "center", alignItems: "center" }}>
+alignItems: "center" }}>
           {/* Left */}
           <div data-aos="fade-right">
             <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: dark ? "rgba(22,163,74,.15)" : "rgba(22,163,74,.08)",
@@ -426,7 +426,7 @@ width: "100%" }}>
           {/* Right card */}
           <div data-aos="fade-left" style={{ display: "flex", justifyContent: "center" }}>
             <div style={{ position: "relative", maxWidth: isMobile ? "100%" : 420,
-width: "100%", width: "100%" }}>
+width: "100%" }}>
               <div style={{
                 borderRadius: 22, overflow: "hidden",
                 boxShadow: "0 20px 56px rgba(22,163,74,.22),0 6px 20px rgba(14,165,233,.12)",
