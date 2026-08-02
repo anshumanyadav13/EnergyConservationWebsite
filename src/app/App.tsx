@@ -350,6 +350,7 @@ function Hero({ dark }: { dark: boolean }) {
           : "linear-gradient(135deg,#f0fdf4 0%,#dcfce7 45%,#dbeafe 100%)",
       }}
     >
+const isMobile = window.innerWidth <= 768;
       {/* Decorative blobs */}
       <div style={{ position: "absolute", width: 520, height: 520, borderRadius: "50%", right: -100, top: -80,
         background: dark ? "radial-gradient(circle,rgba(22,163,74,.07) 0%,transparent 70%)" : "radial-gradient(circle,rgba(22,163,74,.11) 0%,transparent 70%)", pointerEvents: "none" }} />
@@ -364,7 +365,10 @@ function Hero({ dark }: { dark: boolean }) {
     overflow: "hidden",
   }}
 >
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 48, alignItems: "center" }}>
+        <div style={{ display: "grid",
+gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+gap: isMobile ? 30 : 48,
+alignItems: "center", alignItems: "center" }}>
           {/* Left */}
           <div data-aos="fade-right">
             <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: dark ? "rgba(22,163,74,.15)" : "rgba(22,163,74,.08)",
@@ -375,7 +379,7 @@ function Hero({ dark }: { dark: boolean }) {
             </div>
 
             <h1 style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 900,
-              fontSize: "clamp(2rem,5vw,3.5rem)", lineHeight: 1.12,
+              fontSize: isMobile ? "2.4rem" : "clamp(2.8rem,5vw,3.5rem)", lineHeight: 1.12,
               color: dark ? "#d1fae5" : "#0f2d1a", marginBottom: 20 }}>
               Save Energy{" "}
               <span style={{ background: G, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Today</span>
@@ -390,7 +394,10 @@ function Hero({ dark }: { dark: boolean }) {
               choosing renewable sources. Join us in making a difference.
             </p>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
+            <div style={{ display: "flex",
+flexDirection: isMobile ? "column" : "row",
+gap: 14,
+width: "100%" }}>
               <button
                 onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                 style={{ background: GR, color: "#fff", padding: "13px 30px", borderRadius: 50, border: "none",
@@ -418,7 +425,8 @@ function Hero({ dark }: { dark: boolean }) {
 
           {/* Right card */}
           <div data-aos="fade-left" style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ position: "relative", maxWidth: 420, width: "100%" }}>
+            <div style={{ position: "relative", maxWidth: isMobile ? "100%" : 420,
+width: "100%", width: "100%" }}>
               <div style={{
                 borderRadius: 22, overflow: "hidden",
                 boxShadow: "0 20px 56px rgba(22,163,74,.22),0 6px 20px rgba(14,165,233,.12)",
@@ -443,7 +451,8 @@ function Hero({ dark }: { dark: boolean }) {
                 </div>
               </div>
               {/* Badge */}
-              <div style={{ position: "absolute", top: -14, right: -14, background: G, borderRadius: 14,
+              <div style={{ position: "absolute", top: isMobile ? 10 : -14,
+right: isMobile ? 10 : -14, background: G, borderRadius: 14,
                 padding: "10px 14px", color: "#fff", fontSize: "0.75rem", fontWeight: 700,
                 fontFamily: "'Poppins',sans-serif", boxShadow: "0 4px 16px rgba(22,163,74,.4)", textAlign: "center",
                 animation: "floatY 3s ease-in-out infinite" }}>
