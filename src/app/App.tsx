@@ -743,7 +743,7 @@ function Gallery({ dark }: { dark: boolean }) {
   const photos = [
     { img: "https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=700&h=480&fit=crop&auto=format", title: "Awareness Campaign", desc: "Students spreading energy conservation messages", wide: true },
     { img: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=500&h=380&fit=crop&auto=format", title: "Survey Activity", desc: "Collecting community responses on energy habits", wide: false },
-    { img: "https://images.unsplash.com/photo-1542601906897-b588cc94b2ed?w=500&h=380&fit=crop&auto=format", title: "Tree Plantation Drive", desc: "Planting trees for a greener tomorrow", wide: false },
+    { img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&h=380&q=80", title: "Tree Plantation Drive", desc: "Planting trees for a greener tomorrow", wide: false },
     { img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=700&h=480&fit=crop&auto=format", title: "Solar Panel Study", desc: "Learning about photovoltaic energy systems", wide: true },
     { img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=380&fit=crop&auto=format", title: "Group Activity", desc: "Team brainstorming on conservation strategies", wide: false },
     { img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=500&h=380&fit=crop&auto=format", title: "Renewable Visit", desc: "Field visit to a wind and solar energy site", wide: false },
