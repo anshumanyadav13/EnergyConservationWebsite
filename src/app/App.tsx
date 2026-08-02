@@ -335,6 +335,7 @@ function Navbar({ dark, setDark }: { dark: boolean; setDark: (v: boolean) => voi
 
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
 function Hero({ dark }: { dark: boolean }) {
+const isMobile = window.innerWidth <= 768;
   return (
     <section
       id="hero"
@@ -350,7 +351,6 @@ function Hero({ dark }: { dark: boolean }) {
           : "linear-gradient(135deg,#f0fdf4 0%,#dcfce7 45%,#dbeafe 100%)",
       }}
     >
-const isMobile = window.innerWidth <= 768;
       {/* Decorative blobs */}
       <div style={{ position: "absolute", width: 520, height: 520, borderRadius: "50%", right: -100, top: -80,
         background: dark ? "radial-gradient(circle,rgba(22,163,74,.07) 0%,transparent 70%)" : "radial-gradient(circle,rgba(22,163,74,.11) 0%,transparent 70%)", pointerEvents: "none" }} />
