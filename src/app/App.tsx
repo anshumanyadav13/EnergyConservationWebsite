@@ -394,10 +394,12 @@ alignItems: "center" }}>
               choosing renewable sources. Join us in making a difference.
             </p>
 
-            <div style={{ display: "flex",
-flexDirection: isMobile ? "column" : "row",
-gap: 14,
-width: "100%" }}>
+            <div style={{
+  display: "flex",
+  flexDirection: "row",
+  gap: 14,
+  width: "100%"
+}}>
               <button
                 onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                 style={{ background: GR, color: "#fff", padding: "13px 30px", borderRadius: 50, border: "none",
@@ -409,8 +411,8 @@ width: "100%" }}>
               >
                 <i className="fa-solid fa-circle-info" /> Learn More
               </button>
-              <a
-                href="https://forms.gle/bXbC4eZ3VMcRmF5b7" target="_blank" rel="noopener noreferrer"
+             
+<a href="https://forms.gle/bXbC4eZ3VMcRmF5b7" target="_blank" rel="noopener noreferrer"
                 style={{ background: "transparent", color: dark ? "#4ade80" : "#16a34a", padding: "12px 28px", borderRadius: 50,
                   border: "2px solid #16a34a", textDecoration: "none", fontWeight: 700, fontSize: "0.92rem",
                   fontFamily: "'Poppins',sans-serif", display: "flex", alignItems: "center", gap: 8,
