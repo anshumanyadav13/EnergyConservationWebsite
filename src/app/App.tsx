@@ -367,10 +367,15 @@ const isMobile = window.innerWidth <= 768;
     overflow: "hidden",
   }}
 >
-        <div style={{ display: "grid",
-gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-gap: isMobile ? 30 : 48,
-alignItems: "center" }}>
+        <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+    gap: isMobile ? 30 : 48,
+    alignItems: "center",
+    width: "100%",
+  }}
+>
           {/* Left */}
           <div data-aos="fade-right">
             <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: dark ? "rgba(22,163,74,.15)" : "rgba(22,163,74,.08)",
