@@ -360,8 +360,10 @@ const isMobile = window.innerWidth <= 768;
       <div
   style={{
     position: "relative",
-    maxWidth: 420,
+    maxWidth: 1200,
     width: "100%",
+    margin: "0 auto",
+    padding: "0 24px",
     overflow: "hidden",
   }}
 >
