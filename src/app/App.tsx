@@ -364,6 +364,7 @@ const isMobile = window.innerWidth <= 768;
     width: "100%",
     margin: "0 auto",
     padding: "0 24px",
+    boxSizing: "border-box",
     overflow: "hidden",
   }}
 >
