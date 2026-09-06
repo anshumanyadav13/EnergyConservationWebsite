@@ -338,19 +338,20 @@ function Hero({ dark }: { dark: boolean }) {
 const isMobile = window.innerWidth <= 768;
   return (
     <section
-      id="hero"
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        position: "relative",
-        overflowX: "hidden",
-        paddingTop: 80,
-        background: dark
-          ? "linear-gradient(135deg,#071a0f 0%,#0d2618 45%,#082f49 100%)"
-          : "linear-gradient(135deg,#f0fdf4 0%,#dcfce7 45%,#dbeafe 100%)",
-      }}
-    >
+  id="hero"
+  style={{
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+    overflowX: "hidden",
+    paddingTop: 80,
+    boxSizing: "border-box",
+    background: dark
+      ? "linear-gradient(135deg,#071a0f 0%,#0d2618 45%,#082f49 100%)"
+      : "linear-gradient(135deg,#f0fdf4 0%,#dcfce7 45%,#dbeafe 100%)",
+  }}
+>
       {/* Decorative blobs */}
       <div style={{ position: "absolute", width: 520, height: 520, borderRadius: "50%", right: -100, top: -80,
         background: dark ? "radial-gradient(circle,rgba(22,163,74,.07) 0%,transparent 70%)" : "radial-gradient(circle,rgba(22,163,74,.11) 0%,transparent 70%)", pointerEvents: "none" }} />
@@ -402,19 +403,38 @@ const isMobile = window.innerWidth <= 768;
               choosing renewable sources. Join us in making a difference.
             </p>
 
-            <div style={{
-  display: "flex",
-  flexDirection: "row",
-  gap: 14,
-  width: "100%",
-  boxSizing: "border-box",
-}}>
+            <div
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    gap: 14,
+    width: "100%",
+    boxSizing: "border-box",
+  }}
+>
               <button
                 onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-                style={{ background: GR, color: "#fff", padding: "13px 30px", borderRadius: 50, border: "none",
-                  fontWeight: 700, fontSize: "0.92rem", fontFamily: "'Poppins',sans-serif", cursor: "pointer",
-                  boxShadow: "0 4px 20px rgba(22,163,74,.35)", display: "flex", alignItems: "center", gap: 8,
-                  transition: "transform .2s,box-shadow .2s" }}
+                style={{
+  background: GR,
+  color: "#fff",
+  padding: isMobile ? "12px 8px" : "13px 30px",
+  borderRadius: 50,
+  border: "none",
+  fontWeight: 700,
+  fontSize: isMobile ? "0.82rem" : "0.92rem",
+  fontFamily: "'Poppins',sans-serif",
+  cursor: "pointer",
+  boxShadow: "0 4px 20px rgba(22,163,74,.35)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 6,
+  flex: 1,
+  minWidth: 0,
+  whiteSpace: "nowrap",
+  boxSizing: "border-box",
+  transition: "transform .2s,box-shadow .2s"
+}}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(22,163,74,.45)"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = ""; (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(22,163,74,.35)"; }}
               >
@@ -422,11 +442,26 @@ const isMobile = window.innerWidth <= 768;
               </button>
              
 <a href="https://forms.gle/bXbC4eZ3VMcRmF5b7" target="_blank" rel="noopener noreferrer"
-                style={{ background: "transparent", color: dark ? "#4ade80" : "#16a34a", padding: "12px 28px", borderRadius: 50,flex: 1,
-justifyContent: "center",
-                  border: "2px solid #16a34a", textDecoration: "none", fontWeight: 700, fontSize: "0.92rem",
-                  fontFamily: "'Poppins',sans-serif", display: "flex", alignItems: "center", gap: 8,
-                  transition: "background .2s,color .2s,transform .2s" }}
+                style={{
+  background: "transparent",
+  color: dark ? "#4ade80" : "#16a34a",
+  padding: isMobile ? "12px 8px" : "12px 28px",
+  borderRadius: 50,
+  flex: 1,
+  minWidth: 0,
+  justifyContent: "center",
+  border: "2px solid #16a34a",
+  textDecoration: "none",
+  fontWeight: 700,
+  fontSize: isMobile ? "0.82rem" : "0.92rem",
+  fontFamily: "'Poppins',sans-serif",
+  display: "flex",
+  alignItems: "center",
+  gap: 6,
+  whiteSpace: "nowrap",
+  boxSizing: "border-box",
+  transition: "background .2s,color .2s,transform .2s"
+}}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#16a34a"; (e.currentTarget as HTMLElement).style.color = "#fff"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; (e.currentTarget as HTMLElement).style.color = dark ? "#4ade80" : "#16a34a"; }}
               >
