@@ -1077,7 +1077,6 @@ export default function App() {
       <Tips dark={dark} />
       <Renewable dark={dark} />
       <Survey dark={dark} />
-      <Gallery dark={dark} />
       <Team dark={dark} />
       <Contact dark={dark} />
       <Footer dark={dark} />
