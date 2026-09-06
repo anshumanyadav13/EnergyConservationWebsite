@@ -966,7 +966,7 @@ function Contact({ dark }: { dark: boolean }) {
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 function Footer({ dark }: { dark: boolean }) {
   const links = ["about", "objectives", "tips", "renewable", "survey", "gallery", "team"];
-  const labels: Record<string, string> = { about:"About", objectives:"Objectives", tips:"Tips", renewable:"Renewable", survey:"Survey", gallery:"Gallery", team:"Team" };
+  const labels: Record<string, string> = { about:"About", objectives:"Objectives", tips:"Tips", renewable:"Renewable", survey:"Survey", team:"Team" };
 
   return (
     <footer style={{ background: dark ? "#040e08" : "#0f2d1a", color: "#d1fae5", padding: "48px 0 24px", fontFamily: "'Nunito',sans-serif" }}>
