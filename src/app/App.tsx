@@ -965,7 +965,7 @@ function Contact({ dark }: { dark: boolean }) {
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 function Footer({ dark }: { dark: boolean }) {
-  const links = ["about", "objectives", "tips", "renewable", "survey", "gallery", "team"];
+  const links = ["about", "objectives", "tips", "renewable", "survey", "team"];
   const labels: Record<string, string> = { about:"About", objectives:"Objectives", tips:"Tips", renewable:"Renewable", survey:"Survey", team:"Team" };
 
   return (
