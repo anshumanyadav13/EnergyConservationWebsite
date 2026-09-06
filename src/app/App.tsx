@@ -188,10 +188,10 @@ function Navbar({ dark, setDark }: { dark: boolean; setDark: (v: boolean) => voi
     return () => { window.removeEventListener("scroll", h); window.removeEventListener("resize", r); };
   }, []);
 
-  const links = ["about", "objectives", "tips", "renewable", "survey", "gallery", "team", "contact"];
+  const links = ["about", "objectives", "tips", "renewable", "survey", "team", "contact"];
   const labels: Record<string, string> = {
     about: "About", objectives: "Objectives", tips: "Tips", renewable: "Renewable",
-    survey: "Survey", gallery: "Gallery", team: "Team", contact: "Contact",
+    survey: "Survey", team: "Team", contact: "Contact",
   };
 
   const bg = dark
