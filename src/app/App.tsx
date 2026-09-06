@@ -406,7 +406,8 @@ const isMobile = window.innerWidth <= 768;
   display: "flex",
   flexDirection: "row",
   gap: 14,
-  width: "100%"
+  width: "100%",
+  boxSizing: "border-box",
 }}>
               <button
                 onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
