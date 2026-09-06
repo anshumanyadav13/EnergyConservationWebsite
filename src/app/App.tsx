@@ -785,7 +785,58 @@ function Survey({ dark }: { dark: boolean }) {
   );
 }
 
+/* ─── Gallery ────────────────────────────────────────────────────────────── */
+function Gallery({ dark }: { dark: boolean }) {
+  const photos = [
+    { img: "https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=700&h=480&fit=crop&auto=format", title: "Awareness Campaign", desc: "Students spreading energy conservation messages", wide: true },
+    { img: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=500&h=380&fit=crop&auto=format", title: "Survey Activity", desc: "Collecting community responses on energy habits", wide: false },
+    { img: "https://picsum.photos/500/380",
+  title: "Tree Plantation Drive",
+  desc: "Planting trees for a greener tomorrow",
+  wide: false },
+    { img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=700&h=480&fit=crop&auto=format", title: "Solar Panel Study", desc: "Learning about photovoltaic energy systems", wide: true },
+    { img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=380&fit=crop&auto=format", title: "Group Activity", desc: "Team brainstorming on conservation strategies", wide: false },
+    { img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=500&h=380&fit=crop&auto=format", title: "Renewable Visit", desc: "Field visit to a wind and solar energy site", wide: false },
+  ];
 
+  return (
+    <SectionWrap id="gallery" dark={dark}>
+      <SectionTitle icon="fa-solid fa-images" title="Project Gallery"
+        sub="Moments from our energy conservation awareness campaign and field activities." dark={dark} />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", gap: 14 }}>
+        {photos.map((p, i) => (
+          <div key={i} data-aos="fade-up" data-aos-delay={i * 60}
+            style={{ borderRadius: 16, overflow: "hidden", position: "relative", height: 220, cursor: "pointer",
+              boxShadow: dark ? "0 4px 20px rgba(0,0,0,.3)" : "0 4px 16px rgba(22,163,74,.1)",
+              gridColumn: p.wide ? "span 2" : "span 1" }}
+            onMouseEnter={(e) => {
+              (e.currentTarget.querySelector("img") as HTMLElement).style.transform = "scale(1.07)";
+              (e.currentTarget.querySelector(".goverlay") as HTMLElement).style.opacity = "1";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget.querySelector("img") as HTMLElement).style.transform = "scale(1)";
+              (e.currentTarget.querySelector(".goverlay") as HTMLElement).style.opacity = "0";
+            }}>
+            <img src={p.img} alt={p.title}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .5s ease" }} />
+            <div className="goverlay" style={{ position: "absolute", inset: 0,
+              background: "linear-gradient(to top,rgba(7,26,15,.88) 0%,rgba(7,26,15,.18) 55%,transparent 100%)",
+              opacity: 0, transition: "opacity .3s", display: "flex", flexDirection: "column",
+              justifyContent: "flex-end", padding: "16px 18px" }}>
+              <div style={{ color: "#fff", fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.95rem", marginBottom: 3 }}>{p.title}</div>
+              <div style={{ color: "rgba(255,255,255,.75)", fontFamily: "'Nunito',sans-serif", fontSize: "0.8rem" }}>{p.desc}</div>
+            </div>
+            <div style={{ position: "absolute", top: 10, left: 10, background: "rgba(22,163,74,.85)",
+              backdropFilter: "blur(6px)", borderRadius: 20, padding: "3px 10px",
+              color: "#fff", fontSize: "0.68rem", fontWeight: 700, fontFamily: "'Poppins',sans-serif" }}>
+              {p.title}
+            </div>
+          </div>
+        ))}
+      </div>
+    </SectionWrap>
+  );
+}
 
 /* ─── Team ───────────────────────────────────────────────────────────────── */
 function Team({ dark }: { dark: boolean }) {
